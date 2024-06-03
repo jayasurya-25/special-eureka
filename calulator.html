@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="icon" href="./image/download.png">
+    <link rel="stylesheet" href="./calculator.css">
+</head>
+<body>
+    <h1>Enter values :-&nbsp;&nbsp;</h1>
+    <input placeholder="num1" id="num1" type="number">
+    <input placeholder="num2" id="num2" type="number">
+    <table border="10px">
+        <tr><th>CALCULATOR :-</th></tr>
+        <tr><th>OPERATION</th><th>RESULT</th></tr>
+        <tr><td>ADD</td><td id="+"></td></tr>
+        <tr><td>SUB</td><td id="-"></td></tr>
+        <tr><td>MULTIPLY</td><td id="*"></td></tr>
+        <tr><td>DIVIDE</td><td id="/"></td></tr>
+        <tr><td>REMAINDER</td><td id="%"></td></tr>
+        <tr><td><button onclick="calculator()">Click here to answers</button></td></tr>
+    </table>
+    <script>
+        var a=document.getElementById("num1")
+        var b=document.getElementById("num2")
+        var c=document.getElementById("+")
+        var d=document.getElementById("-")
+        var e=document.getElementById("*")
+        var f=document.getElementById("/")
+        var g=document.getElementById("%")
+        function calculator(){
+            var a_value=Number(a.value)
+            var b_value=Number(b.value)
+            var sum=a_value+b_value
+            c.textContent=sum
+            var sub=a_value-b_value
+            d.textContent=sub
+            var multiply=a_value*b_value
+            e.textContent=multiply
+            var divide=a_value/b_value
+            f.textContent=divide
+            var rem=a_value%b_value
+            g.innerHTML=rem
+        }
+    </script>  
+</body>
+</html>
